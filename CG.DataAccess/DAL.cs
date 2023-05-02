@@ -27,6 +27,7 @@ namespace CG.DataAccess
                 connectionString ?? throw new ArgumentNullException(nameof(connectionString));
         }
 
+        /// <inheritdoc/>
         public void ExecuteStoredProcedure(
             string storedProcedureName,
             IDictionary<string, object> parameters
@@ -49,6 +50,7 @@ namespace CG.DataAccess
             }
         }
 
+        /// <inheritdoc/>
         public object GetValueFromStoredProcedure(
             string storedProcedureName,
             IDictionary<string, object> parameters
@@ -71,6 +73,7 @@ namespace CG.DataAccess
             }
         }
 
+        /// <inheritdoc/>
         public DataTable GetTableFromStoredProcedure(
             string storedProcedureName,
             IDictionary<string, object> parameters
